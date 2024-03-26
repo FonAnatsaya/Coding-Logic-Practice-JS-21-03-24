@@ -1,4 +1,4 @@
-const lotateLeft = (numsArr, d) => {
+const rotateLeft = (numsArr, d) => {
   d = d % numsArr.length;
   for (let i = 1; i <= d; i++) {
     let tmp = numsArr[numsArr.length - 1];
@@ -11,10 +11,10 @@ const lotateLeft = (numsArr, d) => {
   return numsArr;
 };
 
-console.log(lotateLeft([1, 2, 3, 4, 5], 1));
-console.log(lotateLeft([1, 2, 3, 4, 5], 2));
-console.log(lotateLeft([1, 2, 3, 4, 5], 3));
-console.log(lotateLeft([1, 2, 3, 4, 5], 4));
-console.log(lotateLeft([1, 2, 3, 4, 5], 5));
-console.log(lotateLeft([1, 2, 3, 4, 5], 6));
-console.log(lotateLeft([1, 2, 3, 4, 5], 7));
+console.log(rotateLeft([1, 2, 3, 4, 5], 1));
+console.log(rotateLeft([1, 2, 3, 4, 5], 2));
+console.log(rotateLeft([1, 2, 3, 4, 5], 3));
+console.log(rotateLeft([1, 2, 3, 4, 5], 4));
+console.log(rotateLeft([1, 2, 3, 4, 5], 5));
+console.log(rotateLeft([1, 2, 3, 4, 5], 6));
+console.log(rotateLeft([1, 2, 3, 4, 5], 7));
