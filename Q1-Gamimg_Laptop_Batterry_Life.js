@@ -14,3 +14,33 @@ function getBattery(events) {
 
 console.log(getBattery([10, -20, 61, -15]));
 console.log(getBattery([4, 25, -30, 70, -10]));
+
+//method2
+
+const getBattery2 = (events) => {
+  const percentage = events.reduce((acc, event) => {
+    acc += event;
+    if (acc < 0) acc = 0;
+    if (acc > 100) acc = 100;
+    return acc;
+  }, 50);
+  return percentage;
+};
+
+console.log(getBattery2([10, -20, 61, -15]));
+console.log(getBattery2([4, 25, -30, 70, -10]));
+
+//method3
+
+const getBattery3 = (events) => {
+  let percentage = 50;
+  events.forEach((event) => {
+    percentage += event;
+    if (percentage < 0) percentage = 0;
+    if (percentage > 100) percentage = 100;
+  });
+  return percentage;
+};
+
+console.log(getBattery3([10, -20, 61, -15]));
+console.log(getBattery3([4, 25, -30, 70, -10]));
